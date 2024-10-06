@@ -27,7 +27,7 @@ jobs:
 
       # unnecessary because the release by default zips all the source code!
       - name: zipmod
-        run: zip -r mod_rng_free.zip scripts
+        run: zip -r mod_deterministic_loot.zip scripts
 
       - name: commitmessage
         run: echo "::set-output name=commitmessage::$(git log -1 --pretty=format:"%s")"
@@ -49,8 +49,8 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./mod_rng_free.zip
-          asset_name: mod_rng_free.zip
+          asset_path: ./mod_deterministic_loot.zip
+          asset_name: mod_deterministic_loot.zip
           asset_content_type: application/gzip
         env:
           GITHUB_TOKEN: ${{ github.token }}
