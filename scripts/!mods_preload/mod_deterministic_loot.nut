@@ -1,6 +1,6 @@
 ::mods_hookExactClass("items/weapons/weapon", function(o) {
 
-	o.isDroppedAsLoot = function isDroppedAsLoot()
+	o.isDroppedAsLoot = function isDroppedAsLoot();
 	{
 		if (!this.item.isDroppedAsLoot())
 		{
